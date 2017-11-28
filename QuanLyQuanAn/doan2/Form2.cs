@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace doan2
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void mụcTiêuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MucTieu m = new MucTieu();
+            m.Show();
+            this.Close();
+        }
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            CacThanhPhanHeThong x = new CacThanhPhanHeThong();
+            x.Show();
+            this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            bophanquanli bql = new bophanquanli();
+            bql.ShowDialog();
+            this.Close();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tạoĐơnHàngPhụcVụTạiChiNhánhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDonHangTaiChiNhanh f = new fDonHangTaiChiNhanh();
+            f.Show();
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+QuanLyQuanAn/.vs
+QuanLyQuanAn/.vs
+QuanLyQuanAn/doan2/bin/Debug/doan2.exe
+QuanLyQuanAn/doan2/bin/Debug/doan2.pdb
+*.pdb
+*.exe
+QuanLyQuanAn/doan2/bin
+QuanLyQuanAn/doan2/obj
+
+QuanLyQuanAn/.vs/doan2/v15/.suo
+QuanLyQuanAn/.vs/doan2/v15/.suo
+QuanLyQuanAn/.vs/doan2/v15/Server/sqlite3/storage.ide
+*.ide-shm
