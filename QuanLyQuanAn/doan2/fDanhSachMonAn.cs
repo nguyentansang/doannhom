@@ -30,5 +30,10 @@ namespace doan2
             dsMonAn = XuLyDuLieu.docBang("select *from MonAn");
             dtgvMonAn.DataSource = dsMonAn;
         }
+
+        private void dtgvMonAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

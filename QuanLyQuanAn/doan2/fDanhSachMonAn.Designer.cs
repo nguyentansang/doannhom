@@ -40,6 +40,7 @@
             this.dtgvMonAn.Name = "dtgvMonAn";
             this.dtgvMonAn.Size = new System.Drawing.Size(726, 346);
             this.dtgvMonAn.TabIndex = 0;
+            this.dtgvMonAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvMonAn_CellContentClick);
             // 
             // btThoatDanhSachMonAn
             // 

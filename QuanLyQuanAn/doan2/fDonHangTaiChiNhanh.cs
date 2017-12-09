@@ -12,61 +12,55 @@ namespace doan2
 {
     public partial class fDonHangTaiChiNhanh : Form
     {
-        DataTable dsDonHang;
-        DataView dsDonHangView;
-        DataTable dsDonHangChiTiet;
-        DataView dsDonHangChiTietView;
-        DataTable dsChiNhanh;
-
 
         public fDonHangTaiChiNhanh()
         {
             InitializeComponent();
         }
 
-        private void btXemMonAn_Click(object sender, EventArgs e)
-        {
-            fDanhSachMonAn f = new fDanhSachMonAn();
-            f.Show();
-        }
-
         private void fDonHangTaiChiNhanh_Load(object sender, EventArgs e)
         {
-            dsDonHang = XuLyDuLieu.docBang("select * from DonHang");
-            dsDonHangView = new DataView(dsDonHang);
-            dtgvDonHangCN.DataSource = dsDonHangView;
 
-            dsDonHangChiTiet = XuLyDuLieu.docBang("select * from DonHangChiTiet");
-            dsDonHangChiTietView = new DataView(dsDonHangChiTiet);
-            dtgvDonHangCTCN.DataSource = dsDonHangChiTietView;
-
-            dsChiNhanh = XuLyDuLieu.docBang("select *from ChiNhanh");
-            cbMaChiNhanhCN.DataSource = dsChiNhanh;
-            cbMaChiNhanhCN.DisplayMember = "TenChiNhanh";
-            cbMaChiNhanhCN.ValueMember = "MaChiNhanh";
         }
 
-        private void btTaoDonHang_Click(object sender, EventArgs e)
+        private void thoátToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if(tbMaDonHangCN.Text != "")
-            {
-                //DataRow dhcn = ((DataRowView)dtgvDonHangCN.SelectedRows[0].DataBoundItem).Row;
-                //dhcn["MaDonHang"] = tbMaDonHangCN.Text;
-                //dhcn["MaChiNhanh"] = cbMaChiNhanhCN.Text;
-                //dhcn["ThoiDiem"] = dtpThoiGianCN;
-                //dhcn["TrangThai"] = nUDSoLuong;
-                dsDonHang.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'",cbMaChiNhanhCN.Text);
-
-            }
-            else
-            {
-                MessageBox.Show("Chua Chon Chi Nhanh", "Thong Bao", MessageBoxButtons.OK);
-            }
+            this.Close();
         }
 
-        private void cbMaChiNhanhCN_TextChanged(object sender, EventArgs e)
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTinCaNhan f = new fThongTinCaNhan();
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fTaoTaiKhoan f = new fTaoTaiKhoan();
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void đơnHàngTạiChiNhánhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDonHangChiNhanh f = new fDonHangChiNhanh();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void đơnHàngMangVềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDonHangMangVe f = new fDonHangMangVe();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -25,9 +25,9 @@ namespace doan2
         }
         private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            CacThanhPhanHeThong x = new CacThanhPhanHeThong();
+          /*  CacThanhPhanHeThong x = new CacThanhPhanHeThong();
             x.Show();
-            this.Close();
+            this.Close();*/
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -52,6 +52,36 @@ namespace doan2
         {
             fDonHangTaiChiNhanh f = new fDonHangTaiChiNhanh();
             f.Show();
+        }
+
+        private void bộPhậnQuảnLíToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bophanquanli bpql = new bophanquanli();
+            bpql.Show();
+        }
+
+        private void hoạtĐộngBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDonHangChiNhanh dhcn = new fDonHangChiNhanh();
+            dhcn.Show();
+        }
+
+        private void tạoĐơnHàngChoKháchKhiCóCuộcGọiĐếnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tongdai td = new tongdai();
+            td.Show();
+        }
+
+        private void hoạtĐộngTổngĐàiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tongdai td = new tongdai();
+            td.Show();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            tongdai td = new tongdai();
+            td.Show();
         }
     }
 }

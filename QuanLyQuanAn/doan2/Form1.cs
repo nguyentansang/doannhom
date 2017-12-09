@@ -69,8 +69,8 @@ namespace doan2
         {
             Form2 f = new Form2();
             bophanquanli bpql = new bophanquanli();
-            chinhanh cn=new chinhanh();
-            //tongdai td=new tongdai();
+            fDonHangChiNhanh cn=new fDonHangChiNhanh();
+            tongdai td=new tongdai();
             if (this.m.Text == "giamdoc" && this.n.Text == "congty")
             {
                 f.Show();
@@ -87,13 +87,13 @@ namespace doan2
                     {
                         cn.Show();
                     }
-                    /*else
+                    else
                     {
-                        if(this.m.Text == "td2" && this.n.Text == "congty"|| this.m.Text == "td2" && this.n.Text == "congty"|| this.m.Text == "td3" && this.n.Text == "congty")
+                        if(this.m.Text == "td1" && this.n.Text == "congty"||this.m.Text == "td2" && this.n.Text == "congty"|| this.m.Text == "td3" && this.n.Text == "congty")
                         {
                             td.Show();
                         }
-                    }*/
+                    }
                 }
             }
             dangnhap();
@@ -105,6 +105,11 @@ namespace doan2
         }
 
         private void m_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void n_TextChanged(object sender, EventArgs e)
         {
 
         }

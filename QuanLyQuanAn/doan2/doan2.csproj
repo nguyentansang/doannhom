@@ -72,17 +72,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="fAccountIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAccountIP.Designer.cs">
+      <DependentUpon>fAccountIP.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDanhSachMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fDanhSachMonAn.Designer.cs">
       <DependentUpon>fDanhSachMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDonHangChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDonHangChiNhanh.Designer.cs">
+      <DependentUpon>fDonHangChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDonHangMangVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDonHangMangVe.Designer.cs">
+      <DependentUpon>fDonHangMangVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDonHangTaiChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fDonHangTaiChiNhanh.Designer.cs">
       <DependentUpon>fDonHangTaiChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,6 +120,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaoTaiKhoan.Designer.cs">
+      <DependentUpon>fTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="MucTieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +134,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tongdai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tongdai.Designer.cs">
+      <DependentUpon>tongdai.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuLyDuLieu.cs" />
     <EmbeddedResource Include="bophanquanli.resx">
       <DependentUpon>bophanquanli.cs</DependentUpon>
@@ -111,17 +147,32 @@
     <EmbeddedResource Include="CacThanhPhanHeThong.resx">
       <DependentUpon>CacThanhPhanHeThong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAccountIP.resx">
+      <DependentUpon>fAccountIP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDanhSachMonAn.resx">
       <DependentUpon>fDanhSachMonAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fDonHangChiNhanh.resx">
+      <DependentUpon>fDonHangChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDonHangMangVe.resx">
+      <DependentUpon>fDonHangMangVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDonHangTaiChiNhanh.resx">
       <DependentUpon>fDonHangTaiChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaoTaiKhoan.resx">
+      <DependentUpon>fTaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MucTieu.resx">
       <DependentUpon>MucTieu.cs</DependentUpon>
@@ -135,6 +186,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="tongdai.resx">
+      <DependentUpon>tongdai.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
