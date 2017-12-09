@@ -17,7 +17,8 @@ namespace doan2
         DataTable dsMonAn;
         DataView dsMonAnView;
         DataTable dsChiNhanh;
-       // DataTable dsBan;
+        DataTable dsBan;
+        // DataTable dsBan;
 
         public fDonHangChiNhanh()
         {
@@ -46,6 +47,15 @@ namespace doan2
             cbChiNhanh.DataSource = dsChiNhanh;
             cbChiNhanh.DisplayMember = "TenChiNhanh";
             cbChiNhanh.ValueMember = "MaChiNhanh";
+
+            dsBan = XuLyDuLieu.docBang("select * from Ban where MaChiNhanh like '" + cbChiNhanh.SelectedValue + "'");
+            lvDanhSachBan.Items.Clear();
+            for (int i = 0; i < dsBan.Rows.Count; i++)
+            {
+                lvDanhSachBan.Items.Add(dsBan.Rows[i]["TenBan"].ToString());
+                lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["TrangThai"].ToString());
+                lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["MaChiNhanh"].ToString());
+            }
         }
         public void AddItem()
         {
