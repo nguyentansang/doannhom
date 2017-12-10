@@ -9,7 +9,7 @@ namespace doan2
 {
     class XuLyDuLieu
     {
-        public static String connecionString = "Provider=SQLNCLI11;Data Source=DESKTOP-HLD364P;Integrated Security=SSPI;Initial Catalog=QuanLyMonAn";
+        public static String connecionString = "Provider=SQLNCLI11;Data Source=DESKTOP-80SOIS9;Integrated Security=SSPI;Initial Catalog=QuanLyMonAn";
 
         public static DataTable docBang(String sql)
         {

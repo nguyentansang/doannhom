@@ -83,5 +83,11 @@ namespace doan2
             tongdai td = new tongdai();
             td.Show();
         }
+
+        private void tạoĐơnHàngMangVềTạiChiNhánhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDonHangMangVe f = new fDonHangMangVe();
+            f.ShowDialog();
+        }
     }
 }

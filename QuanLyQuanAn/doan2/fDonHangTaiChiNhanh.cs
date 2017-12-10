@@ -18,35 +18,6 @@ namespace doan2
             InitializeComponent();
         }
 
-        private void fDonHangTaiChiNhanh_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thoátToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fThongTinCaNhan f = new fThongTinCaNhan();
-            this.Hide();
-            f.ShowDialog();
-        }
-
-        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fTaoTaiKhoan f = new fTaoTaiKhoan();
-            this.Hide();
-            f.ShowDialog();
-        }
-
         private void đơnHàngTạiChiNhánhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fDonHangChiNhanh f = new fDonHangChiNhanh();
@@ -60,6 +31,19 @@ namespace doan2
             fDonHangMangVe f = new fDonHangMangVe();
             this.Hide();
             f.ShowDialog();
+            this.Close();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongTinCaNhan f = new fThongTinCaNhan();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

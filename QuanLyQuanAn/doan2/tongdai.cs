@@ -383,5 +383,10 @@ namespace doan2
         {
 
         }
+
+        private void cbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

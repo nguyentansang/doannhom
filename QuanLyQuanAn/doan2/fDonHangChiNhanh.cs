@@ -18,25 +18,11 @@ namespace doan2
         DataView dsMonAnView;
         DataTable dsChiNhanh;
         DataTable dsBan;
-        // DataTable dsBan;
 
         public fDonHangChiNhanh()
         {
             InitializeComponent();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void fDonHangChiNhanh_Load(object sender, EventArgs e)
         {
             //dsMonAn = XuLyDuLieu.docBang("select * from MonAn");
@@ -218,54 +204,10 @@ namespace doan2
             GiamGia();
             ThanhTien();
         }
-
-        private void tbThanhTien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Đã in !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbSoDienThoai_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvHoaDon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lvDanhSachBan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbChiNhanh.Text == "ChiNhanhToan")
@@ -273,52 +215,31 @@ namespace doan2
                 dsMonAn = XuLyDuLieu.docBang("select * from MonAn where MaChiNhanh like '%1%' ");
                 dsMonAnView = new DataView(dsMonAn);
                 dtgvDanhSachMonAn.DataSource = dsMonAnView;
-
-               // dsBan = XuLyDuLieu.docBang("select * from Ban where MaChiNhanh like '%1%' ");
-
-               // ListViewItem t = new ListViewItem();
-              //  for (int i = 0; i < dsBan.Rows.Count; i++)
-              //  {
-                  //  t = lvDanhSachBan.Items[i].SubItems[0];
-                //    lvDanhSachBan.Items.Add(dsBan.Rows[i]["TenBan"].ToString());
-                    //t.SubItems.Add(dsBan.Rows[i]["TenBan"].ToString());
-              //  }
-                    //t = lvDanhSachBan.Items[i];
-
-                    //int cost = XuLyDuLieu.
-                    //lvDanhSachBan.Items[i].SubItems[1].Text = 
-                    //ListViewItem lv = lvDanhSachBan.Items.Add(dsBan.Rows[i]["MaDH"].ToString());
-                    //lv.SubItems.Add(dsBan.Rows[i]["Ban"].ToString());
-
-                   /* int k;
-                    for (k = 0; k < i; k++)
-                    {
-                        temp = lvHoaDon.Items[k];
-                        if (dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString() == temp.Text)
-                        {
-                            j++;
-                            lvHoaDon.Items[k].SubItems[1].Text = j.ToString();
-
-                            int cost = int.Parse(dtgvDanhSachMonAn.SelectedRows[0].Cells["Gia"].Value.ToString()) * j;
-                            lvHoaDon.Items[k].SubItems[2].Text = cost.ToString();
-                            break;
-                        }
-                    }
-                }*/
             }
             else
                 if (cbChiNhanh.Text == "ChiNhanhSang")
-                {
-                    dsMonAn = XuLyDuLieu.docBang("select * from MonAn where MaChiNhanh like '%2%'");
-                    dsMonAnView = new DataView(dsMonAn);
-                    dtgvDanhSachMonAn.DataSource = dsMonAnView;
-                }
-                else
-                {
-                    dsMonAn = XuLyDuLieu.docBang("select * from MonAn where MaChiNhanh like '%3%'");
-                    dsMonAnView = new DataView(dsMonAn);
-                    dtgvDanhSachMonAn.DataSource = dsMonAnView;
-                }
+            {
+                dsMonAn = XuLyDuLieu.docBang("select * from MonAn where MaChiNhanh like '%2%'");
+                dsMonAnView = new DataView(dsMonAn);
+                dtgvDanhSachMonAn.DataSource = dsMonAnView;
+            }
+            else
+            {
+                dsMonAn = XuLyDuLieu.docBang("select * from MonAn where MaChiNhanh like '%3%'");
+                dsMonAnView = new DataView(dsMonAn);
+                dtgvDanhSachMonAn.DataSource = dsMonAnView;
+            }
+        }
+        private void cbChiNhanh_TextChanged(object sender, EventArgs e)
+        {
+            dsBan = XuLyDuLieu.docBang("select * from Ban where MaChiNhanh like '" + cbChiNhanh.SelectedValue + "'");
+            lvDanhSachBan.Items.Clear();
+            for (int i = 0; i < dsBan.Rows.Count; i++)
+            {
+                lvDanhSachBan.Items.Add(dsBan.Rows[i]["TenBan"].ToString());
+                lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["TrangThai"].ToString());
+                lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["MaChiNhanh"].ToString());
+            }
         }
     }
 }

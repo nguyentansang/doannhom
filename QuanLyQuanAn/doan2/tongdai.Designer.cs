@@ -500,6 +500,7 @@
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(121, 21);
             this.cbTrangThai.TabIndex = 40;
+            this.cbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbTrangThai_SelectedIndexChanged);
             // 
             // button6
             // 

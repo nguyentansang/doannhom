@@ -72,12 +72,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="fAccountIP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAccountIP.Designer.cs">
-      <DependentUpon>fAccountIP.cs</DependentUpon>
-    </Compile>
     <Compile Include="fDanhSachMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +114,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTaoTaiKhoan.cs">
+    <Compile Include="fThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTaoTaiKhoan.Designer.cs">
-      <DependentUpon>fTaoTaiKhoan.cs</DependentUpon>
+    <Compile Include="fThongTinCaNhan.Designer.cs">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="MucTieu.cs">
       <SubType>Form</SubType>
@@ -147,9 +141,6 @@
     <EmbeddedResource Include="CacThanhPhanHeThong.resx">
       <DependentUpon>CacThanhPhanHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fAccountIP.resx">
-      <DependentUpon>fAccountIP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fDanhSachMonAn.resx">
       <DependentUpon>fDanhSachMonAn.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,8 +162,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTaoTaiKhoan.resx">
-      <DependentUpon>fTaoTaiKhoan.cs</DependentUpon>
+    <EmbeddedResource Include="fThongTinCaNhan.resx">
+      <DependentUpon>fThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MucTieu.resx">
       <DependentUpon>MucTieu.cs</DependentUpon>

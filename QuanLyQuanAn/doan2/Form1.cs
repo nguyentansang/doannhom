@@ -103,15 +103,5 @@ namespace doan2
         {
             this.Close();
         }
-
-        private void m_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void n_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
