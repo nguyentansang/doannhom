@@ -272,7 +272,6 @@ namespace doan2
                  dslichsu.Rows.Add(ls);
                 XuLyDuLieu.ghiBang("DonHang",dsdonhang);
                 XuLyDuLieu.ghiBang("LichSuMua", dslichsu);
-
             }
             else
             {

@@ -18,6 +18,8 @@ namespace doan2
         DataView dsMonAnView;
         DataTable dsChiNhanh;
         DataTable dsBan;
+        DataTable dsDonHang;
+        DataTable dsLichSu;
 
         public fDonHangChiNhanh()
         {
@@ -25,14 +27,14 @@ namespace doan2
         }
         private void fDonHangChiNhanh_Load(object sender, EventArgs e)
         {
-            //dsMonAn = XuLyDuLieu.docBang("select * from MonAn");
-            //dsMonAnView = new DataView(dsMonAn);
-            //dtgvDanhSachMonAn.DataSource = dsMonAnView;
-
             dsChiNhanh = XuLyDuLieu.docBang("select * from ChiNhanh");
             cbChiNhanh.DataSource = dsChiNhanh;
             cbChiNhanh.DisplayMember = "TenChiNhanh";
             cbChiNhanh.ValueMember = "MaChiNhanh";
+            dsDonHang = XuLyDuLieu.docBang("select * from DonHang");
+            dtgvDonHang.DataSource = dsDonHang;
+            dsLichSu = XuLyDuLieu.docBang("Select * from LichSuMuaHang");
+            dtgvLichSu.DataSource = dsLichSu;
 
             dsBan = XuLyDuLieu.docBang("select * from Ban where MaChiNhanh like '" + cbChiNhanh.SelectedValue + "'");
             lvDanhSachBan.Items.Clear();
@@ -240,6 +242,51 @@ namespace doan2
                 lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["TrangThai"].ToString());
                 lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["MaChiNhanh"].ToString());
             }
+        }
+
+        private void btDonHang_Click(object sender, EventArgs e)
+        {
+            if(tbMaDonHang.Text != "" || tbSoDienThoai.Text != "" || tbDiaChi.Text !="")
+            {
+                DataRow donhang = dsDonHang.NewRow();
+                dsDonHang.Rows.Add(donhang);
+                donhang["MaDonHang"] = tbMaDonHang.Text;
+                donhang["MaChiNhanh"] = cbChiNhanh.ValueMember;
+                donhang["SoDienThoai"] = tbSoDienThoai.Text;
+                donhang["DiaChi"] = tbDiaChi.Text;
+                donhang["ThoiDiem"] = dtpNgayMua.Text;
+                donhang["TrangThai"] = "Chưa Thanh Toán";
+                donhang["Loai"] = "1";
+                XuLyDuLieu.ghiBang("DonHang", dsDonHang);
+            }
+            else
+            {
+                MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK);
+            }
+        }
+        private void btLichSu_Click(object sender, EventArgs e)
+        {
+            if(tbThanhTien.Text == "")
+            {
+                MessageBox.Show("Bạn Chưa Bấm Tổng Cộng", "Thông Báo", MessageBoxButtons.OK);
+            }
+            else
+                if (tbMaDonHang.Text != "" || tbSoDienThoai.Text != "")
+                {
+                    DataRow ls = dsLichSu.NewRow();
+                    ls["SoDienThoai"] = tbSoDienThoai.Text;
+                    ls["MaDonHang"] = tbMaDonHang.Text;
+                    ls["NgayMua"] = dtpNgayMua.Text;
+                    ls["NgayGiao"] = dtpNgayGiao.Text;
+                    ls["TongCong"] = tbThanhTien.Text;
+                    dsLichSu.Rows.Add(ls);
+
+                    XuLyDuLieu.ghiBang("LichSuMuaHang",dsLichSu);
+                }   
+                else
+                {
+                    MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK);
+                }
         }
     }
 }
