@@ -69,7 +69,7 @@ namespace doan2
         {
             Form2 f = new Form2();
             bophanquanli bpql = new bophanquanli();
-            fDonHangChiNhanh cn=new fDonHangChiNhanh();
+            fDonHangTaiChiNhanh cn=new fDonHangTaiChiNhanh();
             tongdai td=new tongdai();
             if (this.m.Text == "giamdoc" && this.n.Text == "congty")
             {

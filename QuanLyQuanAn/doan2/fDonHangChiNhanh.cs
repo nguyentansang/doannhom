@@ -73,7 +73,7 @@ namespace doan2
             if (tbMaGiamGia.Text == "")
             {
                 MessageBox.Show("Quý Khách Có Chắc Không Cần Giảm Giá");
-                gg = 100;
+                gg = 0;
                 tbGiamGia.Text = gg.ToString();
             }
             else if (tbMaGiamGia.Text == "KhachChiNhanh")
@@ -105,7 +105,7 @@ namespace doan2
             {
                 dv = int.Parse(tbChiPhiDichVu.Text);
             }
-            if(tbGiamGia.Text == "100")
+            if(tbGiamGia.Text == "0")
             {
                 tt = hd + dv;
                 //tt = hd;
@@ -251,7 +251,7 @@ namespace doan2
                 DataRow donhang = dsDonHang.NewRow();
                 dsDonHang.Rows.Add(donhang);
                 donhang["MaDonHang"] = tbMaDonHang.Text;
-                donhang["MaChiNhanh"] = cbChiNhanh.ValueMember;
+                donhang["MaChiNhanh"] = cbChiNhanh.SelectedValue;
                 donhang["SoDienThoai"] = tbSoDienThoai.Text;
                 donhang["DiaChi"] = tbDiaChi.Text;
                 donhang["ThoiDiem"] = dtpNgayMua.Text;
@@ -288,5 +288,6 @@ namespace doan2
                     MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK);
                 }
         }
+
     }
 }

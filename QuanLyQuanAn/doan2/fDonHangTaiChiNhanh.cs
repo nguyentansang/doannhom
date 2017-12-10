@@ -33,8 +33,13 @@ namespace doan2
             f.ShowDialog();
             this.Close();
         }
+        private void đơnHàngTổngĐàiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tongdai td = new tongdai();
+            td.ShowDialog();
+        }
 
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thôngTinCáNhânToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             fThongTinCaNhan f = new fThongTinCaNhan();
             this.Hide();
@@ -42,7 +47,7 @@ namespace doan2
             this.Close();
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thoátToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

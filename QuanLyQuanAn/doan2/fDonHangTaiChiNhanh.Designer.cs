@@ -79,18 +79,21 @@
             this.đơnHàngTổngĐàiToolStripMenuItem.Name = "đơnHàngTổngĐàiToolStripMenuItem";
             this.đơnHàngTổngĐàiToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.đơnHàngTổngĐàiToolStripMenuItem.Text = "Đơn Hàng Tổng Đài";
+            this.đơnHàngTổngĐàiToolStripMenuItem.Click += new System.EventHandler(this.đơnHàngTổngĐàiToolStripMenuItem_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
             this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông Tin Cá Nhân";
+            this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click_1);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click_1);
             // 
             // fDonHangTaiChiNhanh
             // 

@@ -42,7 +42,7 @@ namespace doan2
             dgvDonHang.DataSource = dsdonhang;
             dskhach = XuLyDuLieu.docBang("Select * from Khach");
             dgvKhach.DataSource = dskhach;
-            dslichsu = XuLyDuLieu.docBang("Select * from LichSuMua");
+            dslichsu = XuLyDuLieu.docBang("Select * from LichSuMuaHang");
             dgvLichSu.DataSource = dslichsu;
         }
         public void AddItem()
