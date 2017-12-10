@@ -62,11 +62,12 @@
             this.lvDanhSachBan = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbTimMonAn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachMonAn)).BeginInit();
@@ -88,6 +89,7 @@
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btThanhToan);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btBot);
             this.panel1.Controls.Add(this.btThem);
             this.panel1.Controls.Add(this.btChiPhiPhatSinh);
@@ -426,6 +428,11 @@
             this.columnHeader5.Text = "Trạng Thái";
             this.columnHeader5.Width = 119;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Mã Chi Nhánh";
+            this.columnHeader6.Width = 109;
+            // 
             // tbTimMonAn
             // 
             this.tbTimMonAn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,10 +474,14 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // columnHeader6
+            // textBox1
             // 
-            this.columnHeader6.Text = "Mã Chi Nhánh";
-            this.columnHeader6.Width = 109;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(498, 186);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(330, 26);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.tbSoDienThoai_TextChanged);
             // 
             // fDonHangChiNhanh
             // 
@@ -534,5 +545,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
