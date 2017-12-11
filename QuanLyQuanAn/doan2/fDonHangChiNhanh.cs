@@ -50,7 +50,7 @@ namespace doan2
             j = 1;
             lvHoaDon.Items.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add("1");
-            lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
+            //lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["Gia"].Value.ToString());
             i++;
         }
@@ -59,7 +59,7 @@ namespace doan2
             int hd = 0;
             for (int a = 0; a < i; a++)
             {
-                hd = hd + int.Parse(lvHoaDon.Items[a].SubItems[3].Text);
+                hd = hd + int.Parse(lvHoaDon.Items[a].SubItems[2].Text);
                 tbTienHoaDon.Text = (hd).ToString();
             }
             if (hd == 0)
@@ -208,7 +208,50 @@ namespace doan2
         }
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đã in !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (lvHoaDon.Items.Count == 0)
+            {
+                MessageBox.Show("Chưa chọn món !");
+            }
+            else
+            {
+                if (lvDanhSachBan.SelectedItems.Count <= 0)
+                {
+                    MessageBox.Show("Chưa chọn bàn !");
+                }
+                else
+                {
+                    if (lvDanhSachBan.SelectedItems[0].SubItems[3].Text != "0")
+                    {
+                        if (MessageBox.Show("Bạn có chắc chắn muốn thay đổi hoá đơn của bàn ? ", "Coi chừng nè !! ", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes)
+                        {
+                            MessageBox.Show("Thay đổi của quý khách được giữ nguyên");
+                        }
+                        else
+                        {
+                            lvDanhSachBan.SelectedItems[0].SubItems[3].Text = tbThanhTien.Text;
+                            for (int i = 0; i < dsBan.Rows.Count; i++)
+                            {
+                                if (dsBan.Rows[i]["MaBan"].ToString() == lvDanhSachBan.SelectedItems[0].Text)
+                                {
+
+                                    dsBan.Rows[i]["TongTien"] = tbThanhTien.Text;
+                                    XuLyDuLieu.ghiBang("TongTien", dsBan);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        lvDanhSachBan.SelectedItems[0].SubItems[3].Text = tbThanhTien.Text;
+                        DataRow cost = dsBan.NewRow();
+                        cost["MaBan"] = lvDanhSachBan.SelectedItems[0].Text;
+                        cost["TongTien"] = tbThanhTien.Text;
+                        dsBan.Rows.Add(cost);
+                        XuLyDuLieu.ghiBang("TongTien", dsBan);
+                    }
+                }
+            }
         }
         private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -243,7 +286,6 @@ namespace doan2
                 lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["MaChiNhanh"].ToString());
             }
         }
-
         private void btDonHang_Click(object sender, EventArgs e)
         {
             if(tbMaDonHang.Text != "" || tbSoDienThoai.Text != "" || tbDiaChi.Text !="")
@@ -279,6 +321,7 @@ namespace doan2
                     ls["NgayMua"] = dtpNgayMua.Text;
                     ls["NgayGiao"] = dtpNgayGiao.Text;
                     ls["TongCong"] = tbThanhTien.Text;
+                ls["MaChiNhanh"] = cbChiNhanh.SelectedValue;
                     dsLichSu.Rows.Add(ls);
 
                     XuLyDuLieu.ghiBang("LichSuMua",dsLichSu);
@@ -288,6 +331,5 @@ namespace doan2
                     MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK);
                 }
         }
-
     }
 }

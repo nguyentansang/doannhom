@@ -578,7 +578,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.lvDanhSachBan.Location = new System.Drawing.Point(3, 207);
+            this.lvDanhSachBan.Location = new System.Drawing.Point(3, 200);
             this.lvDanhSachBan.Name = "lvDanhSachBan";
             this.lvDanhSachBan.Size = new System.Drawing.Size(376, 269);
             this.lvDanhSachBan.TabIndex = 1;
@@ -638,7 +638,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 702);
+            this.ClientSize = new System.Drawing.Size(1354, 702);
             this.Controls.Add(this.panel1);
             this.Name = "fDonHangChiNhanh";
             this.ShowIcon = false;

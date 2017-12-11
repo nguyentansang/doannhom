@@ -169,7 +169,6 @@
             this.tạoĐơnHàngPhụcVụTạiChiNhánhToolStripMenuItem,
             this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem,
             this.nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem});
-            this.toolStripMenuItem3.Enabled = false;
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(295, 23);

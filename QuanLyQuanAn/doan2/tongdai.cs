@@ -267,6 +267,7 @@ namespace doan2
                 ls["NgayMua"] = donhang["ThoiDiem"];
                 ls["NgayGiao"] = dtp2.Text;
                 ls["TongCong"] = tbThanhTien.Text;
+                ls["MaChiNhanh"] = donhang["MaChiNhanh"];
                 dslichsu.Rows.Add(ls);
                 XuLyDuLieu.ghiBang("DonHang",dsdonhang);
                 XuLyDuLieu.ghiBang("LichSuMua", dslichsu);
