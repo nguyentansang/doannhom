@@ -393,6 +393,7 @@
             this.btXuongBep.TabIndex = 5;
             this.btXuongBep.Text = "Xuống Bếp";
             this.btXuongBep.UseVisualStyleBackColor = true;
+            this.btXuongBep.Click += new System.EventHandler(this.btXuongBep_Click);
             // 
             // btThanhToan
             // 
@@ -584,7 +585,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.panel1);
             this.Name = "fDonHangMangVe";
             this.Text = "fDonHangMangVe";

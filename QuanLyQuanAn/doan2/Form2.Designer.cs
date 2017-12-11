@@ -187,6 +187,7 @@
             this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem.Name = "nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem";
             this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem.Size = new System.Drawing.Size(716, 24);
             this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem.Text = "Nhập chi phí phát sinh cho quán trong ngày";
+            this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem.Click += new System.EventHandler(this.nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem_Click);
             // 
             // nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem
             // 

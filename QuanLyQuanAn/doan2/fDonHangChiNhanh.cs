@@ -43,6 +43,7 @@ namespace doan2
                 lvDanhSachBan.Items.Add(dsBan.Rows[i]["TenBan"].ToString());
                 lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["TrangThai"].ToString());
                 lvDanhSachBan.Items[i].SubItems.Add(dsBan.Rows[i]["MaChiNhanh"].ToString());
+                lvDanhSachBan.Items[i].SubItems.Add("0");
             }
         }
         public void AddItem()
@@ -50,7 +51,6 @@ namespace doan2
             j = 1;
             lvHoaDon.Items.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add("1");
-            //lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["Gia"].Value.ToString());
             i++;
         }
@@ -167,11 +167,8 @@ namespace doan2
                             break;
                         }
                     }
-
                     lvHoaDon.SelectedItems[0].SubItems[1].Text = (--soluong).ToString();
                     lvHoaDon.SelectedItems[0].SubItems[2].Text = (dongia * soluong).ToString();
-
-
                 }
                 else
                     while (lvHoaDon.SelectedItems.Count > 0)
@@ -179,7 +176,7 @@ namespace doan2
                         lvHoaDon.Items.Remove(lvHoaDon.SelectedItems[0]);
                         i--;
                     }
-                TienHoaDon();
+            TienHoaDon();
             }
             else
             {
@@ -187,7 +184,6 @@ namespace doan2
                     MessageBox.Show("Qúy Khách Đã Sai Thao Tác");
             }
         }
-
         private void tbTimMonAn_TextChanged(object sender, EventArgs e)
         {
             if (tbTimMonAn.Text == "")
@@ -220,35 +216,14 @@ namespace doan2
                 }
                 else
                 {
-                    if (lvDanhSachBan.SelectedItems[0].SubItems[3].Text != "0")
+                    if (lvDanhSachBan.Items[0].SubItems[3].Text != "0")
                     {
-                        if (MessageBox.Show("Bạn có chắc chắn muốn thay đổi hoá đơn của bàn ? ", "Coi chừng nè !! ", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes)
-                        {
-                            MessageBox.Show("Thay đổi của quý khách được giữ nguyên");
-                        }
-                        else
-                        {
-                            lvDanhSachBan.SelectedItems[0].SubItems[3].Text = tbThanhTien.Text;
-                            for (int i = 0; i < dsBan.Rows.Count; i++)
-                            {
-                                if (dsBan.Rows[i]["MaBan"].ToString() == lvDanhSachBan.SelectedItems[0].Text)
-                                {
-
-                                    dsBan.Rows[i]["TongTien"] = tbThanhTien.Text;
-                                    XuLyDuLieu.ghiBang("TongTien", dsBan);
-                                    break;
-                                }
-                            }
-                        }
+                        MessageBox.Show("Bàn Đã Có người");
                     }
                     else
-                    {
+                    {   
                         lvDanhSachBan.SelectedItems[0].SubItems[3].Text = tbThanhTien.Text;
-                        DataRow cost = dsBan.NewRow();
-                        cost["MaBan"] = lvDanhSachBan.SelectedItems[0].Text;
-                        cost["TongTien"] = tbThanhTien.Text;
-                        dsBan.Rows.Add(cost);
-                        XuLyDuLieu.ghiBang("TongTien", dsBan);
+                        //lvDanhSachBan.SelectedItems[0].SubItems[1].Text = "Có";
                     }
                 }
             }

@@ -32,7 +32,7 @@ namespace doan2
             cbChiNhanh.ValueMember = "MaChiNhanh";
             dsDonHang = XuLyDuLieu.docBang("select * from DonHang");
             dtgvDonHang.DataSource = dsDonHang;
-            dsLichSu = XuLyDuLieu.docBang("Select * from LichSuMuaHang");
+            dsLichSu = XuLyDuLieu.docBang("Select * from LichSuMua");
             dtgvLichSu.DataSource = dsLichSu;
         }
         public void AddItem()
@@ -40,7 +40,6 @@ namespace doan2
             j = 1;
             lvHoaDon.Items.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add("1");
-            lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             lvHoaDon.Items[i].SubItems.Add(dtgvDanhSachMonAn.SelectedRows[0].Cells["Gia"].Value.ToString());
             i++;
         }
@@ -49,7 +48,7 @@ namespace doan2
             int hd = 0;
             for (int a = 0; a < i; a++)
             {
-                hd = hd + int.Parse(lvHoaDon.Items[a].SubItems[3].Text);
+                hd = hd + int.Parse(lvHoaDon.Items[a].SubItems[2].Text);
                 tbTienHoaDon.Text = (hd).ToString();
             }
             if (hd == 0)
@@ -259,12 +258,17 @@ namespace doan2
                 ls["TongCong"] = tbThanhTien.Text;
                 dsLichSu.Rows.Add(ls);
 
-                XuLyDuLieu.ghiBang("LichSuMuaHang", dsLichSu);
+                XuLyDuLieu.ghiBang("LichSuMua", dsLichSu);
             }
             else
             {
                 MessageBox.Show("Bạn Chưa Nhập Đủ Thông Tin", "Thông Báo", MessageBoxButtons.OK);
             }
+        }
+
+        private void btXuongBep_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đã Xuống Bếp");
         }
     }
 }

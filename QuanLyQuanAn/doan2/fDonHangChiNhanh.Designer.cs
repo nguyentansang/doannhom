@@ -75,14 +75,14 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbTimMonAn = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lvDanhSachBan = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tbTimMonAn = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLichSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDonHang)).BeginInit();
@@ -104,6 +104,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lvDanhSachBan);
             this.panel1.Controls.Add(this.btLichSu);
             this.panel1.Controls.Add(this.btDonHang);
             this.panel1.Controls.Add(this.dtgvLichSu);
@@ -120,7 +121,6 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lvHoaDon);
-            this.panel1.Controls.Add(this.lvDanhSachBan);
             this.panel1.Controls.Add(this.tbTimMonAn);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -287,7 +287,7 @@
             this.panel3.Controls.Add(this.tbGiamGia);
             this.panel3.Controls.Add(this.tbMaGiamGia);
             this.panel3.Controls.Add(this.tbChiPhiDichVu);
-            this.panel3.Location = new System.Drawing.Point(3, 475);
+            this.panel3.Location = new System.Drawing.Point(4, 479);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(376, 227);
             this.panel3.TabIndex = 6;
@@ -571,40 +571,6 @@
             this.columnHeader3.Text = "Giá";
             this.columnHeader3.Width = 87;
             // 
-            // lvDanhSachBan
-            // 
-            this.lvDanhSachBan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7});
-            this.lvDanhSachBan.Location = new System.Drawing.Point(3, 200);
-            this.lvDanhSachBan.Name = "lvDanhSachBan";
-            this.lvDanhSachBan.Size = new System.Drawing.Size(376, 269);
-            this.lvDanhSachBan.TabIndex = 1;
-            this.lvDanhSachBan.UseCompatibleStateImageBehavior = false;
-            this.lvDanhSachBan.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tên Bàn";
-            this.columnHeader4.Width = 81;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Trạng Thái";
-            this.columnHeader5.Width = 89;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Mã Chi Nhánh";
-            this.columnHeader6.Width = 103;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Tổng Cộng";
-            this.columnHeader7.Width = 99;
-            // 
             // tbTimMonAn
             // 
             this.tbTimMonAn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -633,6 +599,39 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Hóa Đơn";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvDanhSachBan
+            // 
+            this.lvDanhSachBan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader8});
+            this.lvDanhSachBan.Location = new System.Drawing.Point(0, 206);
+            this.lvDanhSachBan.Name = "lvDanhSachBan";
+            this.lvDanhSachBan.Size = new System.Drawing.Size(380, 270);
+            this.lvDanhSachBan.TabIndex = 12;
+            this.lvDanhSachBan.UseCompatibleStateImageBehavior = false;
+            this.lvDanhSachBan.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tên Bàn";
+            this.columnHeader4.Width = 79;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Trạng Thái";
+            this.columnHeader5.Width = 104;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Mã Chi Nhánh";
+            this.columnHeader6.Width = 97;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tổng Cộng";
             // 
             // fDonHangChiNhanh
             // 
@@ -667,7 +666,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbSoDienThoai;
-        private System.Windows.Forms.ListView lvDanhSachBan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtgvDanhSachMonAn;
         private System.Windows.Forms.ListView lvHoaDon;
@@ -695,9 +693,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbMaDonHang;
@@ -708,7 +703,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgayGiao;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker dtpNgayMua;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button btXuongBep;
         private System.Windows.Forms.DataGridView dtgvLichSu;
         private System.Windows.Forms.DataGridView dtgvDonHang;
@@ -716,5 +710,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btDonHang;
         private System.Windows.Forms.Button btLichSu;
+        private System.Windows.Forms.ListView lvDanhSachBan;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

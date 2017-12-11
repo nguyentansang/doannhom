@@ -94,5 +94,10 @@ namespace doan2
         {
 
         }
+
+        private void nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
