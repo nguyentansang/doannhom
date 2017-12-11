@@ -73,6 +73,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dtp2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).BeginInit();
             this.panel3.SuspendLayout();
@@ -98,9 +100,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(317, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Ngày mua";
+            this.label3.Text = "Ngày Mua";
             // 
             // label4
             // 
@@ -149,7 +151,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(338, 138);
+            this.label5.Location = new System.Drawing.Point(333, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 10;
@@ -162,7 +164,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.hoadon.Location = new System.Drawing.Point(251, 160);
+            this.hoadon.Location = new System.Drawing.Point(253, 216);
             this.hoadon.Name = "hoadon";
             this.hoadon.Size = new System.Drawing.Size(243, 196);
             this.hoadon.TabIndex = 11;
@@ -207,7 +209,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(516, 160);
+            this.button1.Location = new System.Drawing.Point(544, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 49);
             this.button1.TabIndex = 15;
@@ -218,7 +220,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(516, 288);
+            this.button3.Location = new System.Drawing.Point(542, 345);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 49);
             this.button3.TabIndex = 17;
@@ -250,7 +252,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(516, 224);
+            this.button4.Location = new System.Drawing.Point(544, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 49);
             this.button4.TabIndex = 21;
@@ -267,7 +269,7 @@
             this.panel3.Controls.Add(this.tbThanhTien);
             this.panel3.Controls.Add(this.tbGiamGia);
             this.panel3.Controls.Add(this.tbDichVu);
-            this.panel3.Location = new System.Drawing.Point(251, 362);
+            this.panel3.Location = new System.Drawing.Point(251, 428);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(366, 179);
             this.panel3.TabIndex = 22;
@@ -513,11 +515,30 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(317, 141);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 16);
+            this.label18.TabIndex = 42;
+            this.label18.Text = "Ngày Giao";
+            // 
+            // dtp2
+            // 
+            this.dtp2.Location = new System.Drawing.Point(393, 137);
+            this.dtp2.Name = "dtp2";
+            this.dtp2.Size = new System.Drawing.Size(207, 20);
+            this.dtp2.TabIndex = 43;
+            // 
             // tongdai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 579);
+            this.ClientSize = new System.Drawing.Size(1169, 623);
+            this.Controls.Add(this.dtp2);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.cbTrangThai);
             this.Controls.Add(this.label1);
@@ -613,5 +634,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbTrangThai;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dtp2;
     }
 }

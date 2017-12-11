@@ -19,6 +19,7 @@ namespace doan2
         DataTable dsdonhang;
         DataTable dskhach;
         DataTable dslichsu;
+        DataView dslichsuview;
         int j = 1;
         int i = 0;
         public tongdai()
@@ -42,8 +43,9 @@ namespace doan2
             dgvDonHang.DataSource = dsdonhang;
             dskhach = XuLyDuLieu.docBang("Select * from Khach");
             dgvKhach.DataSource = dskhach;
-            dslichsu = XuLyDuLieu.docBang("Select * from LichSuMuaHang");
-            dgvLichSu.DataSource = dslichsu;
+            dslichsu = XuLyDuLieu.docBang("select * from LichSuMua");
+            dslichsuview = new DataView(dslichsu);
+            dgvLichSu.DataSource = dslichsuview;
         }
         public void AddItem()
         {
@@ -252,7 +254,6 @@ namespace doan2
                 DataRow cn = ((DataRowView)dgvChiNhanh.SelectedRows[0].DataBoundItem).Row;
                 DataRow k = ((DataRowView)dgvKhach.SelectedRows[0].DataBoundItem).Row;
                 DataRow donhang = dsdonhang.NewRow();
-             //   DataRow dh = ((DataRowView)dgvDonHang.SelectedRows[0].DataBoundItem).Row;
                 DataRow ls = dslichsu.NewRow();
                 donhang["MaDonHang"] = tbMaDonHang.Text;
                 donhang["MaChiNhanh"] = cn["MaChiNhanh"];
@@ -260,16 +261,13 @@ namespace doan2
                 donhang["DiaChi"] = k["DiaChi"];
                 donhang["ThoiDiem"] = dtp1.Text;
                 donhang["TrangThai"] = cbTrangThai.Text;
-             //   ls["SoDienThoai"] = k["SoDienThoai"];
-             //   ls["MaDonHang"] = dh["MaDonHang"];
-             //   ls["ThoiDiem"] = dh["ThoiDiem"];
-             //   ls["ThanhTien"] = tbThanhTien.Text;
                 dsdonhang.Rows.Add(donhang);
-                   ls["SoDienThoai"] = k["SoDienThoai"];
-                   ls["MaDonHang"] = donhang["MaDonHang"];
-                   ls["ThoiDiem"] = donhang["ThoiDiem"];
-                   ls["ThanhTien"] = tbThanhTien.Text;
-                 dslichsu.Rows.Add(ls);
+                ls["SoDienThoai"] = k["SoDienThoai"];
+                ls["MaDonHang"] = donhang["MaDonHang"];
+                ls["NgayMua"] = donhang["ThoiDiem"];
+                ls["NgayGiao"] = dtp2.Text;
+                ls["TongCong"] = tbThanhTien.Text;
+                dslichsu.Rows.Add(ls);
                 XuLyDuLieu.ghiBang("DonHang",dsdonhang);
                 XuLyDuLieu.ghiBang("LichSuMua", dslichsu);
             }
@@ -281,7 +279,15 @@ namespace doan2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (tbSDT.Text == "")
+            {
+                dslichsuview.RowFilter = "";
+            }
+            else
+            {
+                String str = String.Format("SoDienThoai like '%{0}%'", tbSDT.Text);
+                dslichsuview.RowFilter = str;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

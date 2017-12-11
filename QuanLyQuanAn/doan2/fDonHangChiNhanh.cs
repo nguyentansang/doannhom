@@ -33,7 +33,7 @@ namespace doan2
             cbChiNhanh.ValueMember = "MaChiNhanh";
             dsDonHang = XuLyDuLieu.docBang("select * from DonHang");
             dtgvDonHang.DataSource = dsDonHang;
-            dsLichSu = XuLyDuLieu.docBang("Select * from LichSuMuaHang");
+            dsLichSu = XuLyDuLieu.docBang("Select * from LichSuMua");
             dtgvLichSu.DataSource = dsLichSu;
 
             dsBan = XuLyDuLieu.docBang("select * from Ban where MaChiNhanh like '" + cbChiNhanh.SelectedValue + "'");
@@ -281,7 +281,7 @@ namespace doan2
                     ls["TongCong"] = tbThanhTien.Text;
                     dsLichSu.Rows.Add(ls);
 
-                    XuLyDuLieu.ghiBang("LichSuMuaHang",dsLichSu);
+                    XuLyDuLieu.ghiBang("LichSuMua",dsLichSu);
                 }   
                 else
                 {
