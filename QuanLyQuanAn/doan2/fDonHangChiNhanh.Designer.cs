@@ -104,6 +104,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.lvDanhSachBan);
             this.panel1.Controls.Add(this.btLichSu);
             this.panel1.Controls.Add(this.btDonHang);
