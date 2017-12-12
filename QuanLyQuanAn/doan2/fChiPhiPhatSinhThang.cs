@@ -12,6 +12,7 @@ namespace doan2
 {
     public partial class fChiPhiPhatSinhThang : Form
     {
+        DataTable dsChiPhi;
         public fChiPhiPhatSinhThang()
         {
             InitializeComponent();
@@ -19,6 +20,14 @@ namespace doan2
 
         private void btNhap_Click(object sender, EventArgs e)
         {
+            DataRow cp = dsChiPhi.NewRow();
+            dsChiPhi.Rows.Add(cp);
+            cp["Ngay"] = tbNgay.Text;
+            cp["Thang"] = tbThang.Text;
+            cp["Nam"] = tbNam.Text;
+            cp["ChiPhiPhatSinh"] = tbTongCong.Text;
+            XuLyDuLieu.ghiBang("ChiPhiPhatSinh", dsChiPhi);
+
             MessageBox.Show("Nhập Thành Công");
         }
 
@@ -28,6 +37,19 @@ namespace doan2
         }
 
         private void fChiPhiPhatSinhThang_Load(object sender, EventArgs e)
+        {
+            dsChiPhi = XuLyDuLieu.docBang("select * from ChiPhiPhatSinh");
+        }
+
+        private void tbTongCong_TextChanged(object sender, EventArgs e)
+        {
+            int lnv = int.Parse(tbLuongNhanVien.Text);
+            int tn = int.Parse(tbTienNha.Text);
+            int tc = lnv + tn;
+            tbTongCong.Text = tc.ToString();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

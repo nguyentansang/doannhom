@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace doan2
 {
+    
     public partial class fChiPhiPhatSinhNgay : Form
     {
+        DataTable dsChiPhi;
         public fChiPhiPhatSinhNgay()
         {
             InitializeComponent();
@@ -19,6 +21,14 @@ namespace doan2
 
         private void btNhap_Click(object sender, EventArgs e)
         {
+            DataRow cp = dsChiPhi.NewRow();
+            dsChiPhi.Rows.Add(cp);
+            cp["Ngay"] = tbNgay.Text;
+            cp["Thang"] = tbThang.Text;
+            cp["Nam"] = tbNam.Text;
+            cp["ChiPhiPhatSinh"] = tbChiPhi.Text;
+            XuLyDuLieu.ghiBang("ChiPhiPhatSinh", dsChiPhi);
+
             MessageBox.Show("Nhập Thành Công");
         }
 
@@ -29,7 +39,7 @@ namespace doan2
 
         private void fChiPhiPhatSinhNgay_Load(object sender, EventArgs e)
         {
-
+            dsChiPhi = XuLyDuLieu.docBang("select * from ChiPhiPhatSinh");
         }
     }
 }

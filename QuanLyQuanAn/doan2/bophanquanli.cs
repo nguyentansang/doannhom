@@ -657,7 +657,8 @@ namespace doan2
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-
+            fDoanhThuTong f = new fDoanhThuTong();
+            f.Show();
         }
 
         private void label12_Click(object sender, EventArgs e)
