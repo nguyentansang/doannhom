@@ -24,6 +24,7 @@ namespace doan2
             DataRow kh = dskhach.NewRow();
             kh["SoDienThoai"] = tbSoDienThoai.Text;
             kh["DiaChi"] = tbDiaChi.Text;
+            kh["Loai"] = "NorMal";
 
             dskhach.Rows.Add(kh);
             XuLyDuLieu.ghiBang("Khach", dskhach);

@@ -30,6 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lvDanhSachBan = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btLichSu = new System.Windows.Forms.Button();
             this.btDonHang = new System.Windows.Forms.Button();
             this.dtgvLichSu = new System.Windows.Forms.DataGridView();
@@ -78,11 +83,6 @@
             this.tbTimMonAn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lvDanhSachBan = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLichSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDonHang)).BeginInit();
@@ -129,6 +129,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1359, 706);
             this.panel1.TabIndex = 1;
+            // 
+            // lvDanhSachBan
+            // 
+            this.lvDanhSachBan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader8});
+            this.lvDanhSachBan.Location = new System.Drawing.Point(0, 206);
+            this.lvDanhSachBan.Name = "lvDanhSachBan";
+            this.lvDanhSachBan.Size = new System.Drawing.Size(380, 270);
+            this.lvDanhSachBan.TabIndex = 12;
+            this.lvDanhSachBan.UseCompatibleStateImageBehavior = false;
+            this.lvDanhSachBan.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tên Bàn";
+            this.columnHeader4.Width = 79;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Trạng Thái";
+            this.columnHeader5.Width = 104;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Mã Chi Nhánh";
+            this.columnHeader6.Width = 97;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tổng Cộng";
             // 
             // btLichSu
             // 
@@ -600,39 +633,6 @@
             this.label5.Text = "Hóa Đơn";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lvDanhSachBan
-            // 
-            this.lvDanhSachBan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader8});
-            this.lvDanhSachBan.Location = new System.Drawing.Point(0, 206);
-            this.lvDanhSachBan.Name = "lvDanhSachBan";
-            this.lvDanhSachBan.Size = new System.Drawing.Size(380, 270);
-            this.lvDanhSachBan.TabIndex = 12;
-            this.lvDanhSachBan.UseCompatibleStateImageBehavior = false;
-            this.lvDanhSachBan.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tên Bàn";
-            this.columnHeader4.Width = 79;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Trạng Thái";
-            this.columnHeader5.Width = 104;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Mã Chi Nhánh";
-            this.columnHeader6.Width = 97;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Tổng Cộng";
-            // 
             // fDonHangChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,6 +641,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fDonHangChiNhanh";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đơn Hàng Chi Nhánh";
             this.Load += new System.EventHandler(this.fDonHangChiNhanh_Load);
             this.panel1.ResumeLayout(false);

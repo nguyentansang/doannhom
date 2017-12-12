@@ -35,8 +35,10 @@ namespace doan2
         }
         private void đơnHàngTổngĐàiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tongdai td = new tongdai();
-            td.ShowDialog();
+            fNhanDonHangTD f = new fNhanDonHangTD();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void thôngTinCáNhânToolStripMenuItem_Click_1(object sender, EventArgs e)

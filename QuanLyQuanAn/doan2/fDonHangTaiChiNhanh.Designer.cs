@@ -103,6 +103,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fDonHangTaiChiNhanh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fDonHangTaiChiNhanh";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -588,6 +588,7 @@
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.panel1);
             this.Name = "fDonHangMangVe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fDonHangMangVe";
             this.Load += new System.EventHandler(this.fDonHangMangVe_Load);
             this.panel1.ResumeLayout(false);

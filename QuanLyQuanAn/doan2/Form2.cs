@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace doan2
 {
@@ -97,7 +98,30 @@ namespace doan2
 
         private void nhậpChiPhíPhátSinhChoQuánTrongNgàyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fChiPhiPhatSinhNgay f = new fChiPhiPhatSinhNgay();
+            f.ShowDialog();
         }
+
+        private void nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChiPhiPhatSinhThang f = new fChiPhiPhatSinhThang();
+            f.ShowDialog();
+        }
+
+        /*private void label1_Click(object sender, EventArgs e)
+        {
+            int start = label1.Left();
+            while (label1.Left < this.Width - label1.Left)
+            {
+                label1.Left += 5;
+                Application.DoEvents();
+                Thread.Sleep(30);
+                if(label1.Left >= this.Width - label1.Left)
+                {
+                    label1.Left = start;
+                }
+            }
+
+        }*/
     }
 }

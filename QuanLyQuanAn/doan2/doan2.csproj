@@ -72,11 +72,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="fDanhSachMonAn.cs">
+    <Compile Include="fChiPhiPhatSinhNgay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fDanhSachMonAn.Designer.cs">
-      <DependentUpon>fDanhSachMonAn.cs</DependentUpon>
+    <Compile Include="fChiPhiPhatSinhNgay.Designer.cs">
+      <DependentUpon>fChiPhiPhatSinhNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChiPhiPhatSinhThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChiPhiPhatSinhThang.Designer.cs">
+      <DependentUpon>fChiPhiPhatSinhThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDoanhThuTong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDoanhThuTong.Designer.cs">
+      <DependentUpon>fDoanhThuTong.cs</DependentUpon>
     </Compile>
     <Compile Include="fDonHangChiNhanh.cs">
       <SubType>Form</SubType>
@@ -96,11 +108,11 @@
     <Compile Include="fDonHangTaiChiNhanh.Designer.cs">
       <DependentUpon>fDonHangTaiChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="fKhachHang.cs">
+    <Compile Include="fNhanDonHangTD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fKhachHang.Designer.cs">
-      <DependentUpon>fKhachHang.cs</DependentUpon>
+    <Compile Include="fNhanDonHangTD.Designer.cs">
+      <DependentUpon>fNhanDonHangTD.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -141,8 +153,14 @@
     <EmbeddedResource Include="CacThanhPhanHeThong.resx">
       <DependentUpon>CacThanhPhanHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fDanhSachMonAn.resx">
-      <DependentUpon>fDanhSachMonAn.cs</DependentUpon>
+    <EmbeddedResource Include="fChiPhiPhatSinhNgay.resx">
+      <DependentUpon>fChiPhiPhatSinhNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChiPhiPhatSinhThang.resx">
+      <DependentUpon>fChiPhiPhatSinhThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDoanhThuTong.resx">
+      <DependentUpon>fDoanhThuTong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDonHangChiNhanh.resx">
       <DependentUpon>fDonHangChiNhanh.cs</DependentUpon>
@@ -153,8 +171,8 @@
     <EmbeddedResource Include="fDonHangTaiChiNhanh.resx">
       <DependentUpon>fDonHangTaiChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fKhachHang.resx">
-      <DependentUpon>fKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="fNhanDonHangTD.resx">
+      <DependentUpon>fNhanDonHangTD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -176,6 +194,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="tongdai.resx">
       <DependentUpon>tongdai.cs</DependentUpon>
@@ -203,6 +222,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050c51b2104b198498173635b56dc4787531e6-wm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39254694.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de-an-bao-ve-moi-truong-don-gian-cho-nha-hang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nha-hang-1982-bistro-nguyen-hue-7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

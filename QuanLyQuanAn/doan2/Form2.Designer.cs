@@ -52,6 +52,7 @@
             this.huỷđổiĐơnHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoThôngTinKháchHàngMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.toolStripMenuItem6});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1136, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1124, 27);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -195,6 +196,7 @@
             this.nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem.Size = new System.Drawing.Size(716, 24);
             this.nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem.Text = "Nhập chi phí phát sinh cho quán trong tháng (mỗi tháng nhập 1 lần: tiền thuê nhà," +
     "...)";
+            this.nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem.Click += new System.EventHandler(this.nhậpChiPhíPhátSinhChoQuánTrongThángmỗiThángNhập1LầnTiềnThuêNhàToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -249,13 +251,28 @@
             this.toolStripMenuItem6.Text = "Thoát";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Khaki;
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label1.Location = new System.Drawing.Point(296, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(534, 48);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Chào Mừng Đến Nhà Hàng Của Chúng Tôi";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 200);
+            this.BackgroundImage = global::doan2.Properties.Resources.de_an_bao_ve_moi_truong_don_gian_cho_nha_hang;
+            this.ClientSize = new System.Drawing.Size(1124, 613);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -291,5 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem huỷđổiĐơnHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tạoThôngTinKháchHàngMớiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.Label label1;
     }
 }

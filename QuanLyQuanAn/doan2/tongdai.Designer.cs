@@ -471,6 +471,7 @@
             this.cbLoai.Name = "cbLoai";
             this.cbLoai.Size = new System.Drawing.Size(101, 21);
             this.cbLoai.TabIndex = 37;
+            this.cbLoai.SelectedIndexChanged += new System.EventHandler(this.cbLoai_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -574,6 +575,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "tongdai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tongdai";
             this.Load += new System.EventHandler(this.tongdai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).EndInit();

@@ -261,6 +261,7 @@ namespace doan2
                 donhang["DiaChi"] = k["DiaChi"];
                 donhang["ThoiDiem"] = dtp1.Text;
                 donhang["TrangThai"] = cbTrangThai.Text;
+                donhang["Loai"] = "3";
                 dsdonhang.Rows.Add(donhang);
                 ls["SoDienThoai"] = k["SoDienThoai"];
                 ls["MaDonHang"] = donhang["MaDonHang"];
@@ -394,5 +395,22 @@ namespace doan2
         {
 
         }
+
+        private void cbLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        /*private void cbLoai_TextChanged(object sender, EventArgs e)
+        {
+            if(cbLoai.Text == "NorMal")
+            {
+                tbGiamGia.Text = 10.ToString();
+            }
+            else
+            {
+                tbGiamGia.Text = 20.ToString();
+            }
+        }*/
     }
 }
